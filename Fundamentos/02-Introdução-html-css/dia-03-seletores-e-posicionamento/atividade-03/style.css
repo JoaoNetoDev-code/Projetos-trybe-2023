@@ -1,0 +1,10 @@
+h1, p {
+    text-align: center;
+}
+*{
+    font-family: monospace;
+}
+ul :hover{
+    background-color: aquamarine;
+    color: aliceblue;
+}

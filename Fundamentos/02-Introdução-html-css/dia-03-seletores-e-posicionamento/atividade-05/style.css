@@ -1,0 +1,59 @@
+.ordenada
+{
+    background-color: yellow;
+    font-weight:bold;
+}
+.ímpar{
+    text-transform: uppercase;
+}
+.par
+{
+    background-color: green;
+}
+ h1,h2,h3,h4,h5,h6{
+    color: red;
+}
+
+h1
+{
+    font-size: 40px;
+    border: solid 1px black;
+}
+
+li
+{
+    font-size: 20px;
+}
+
+.python, .C
+{
+    color: blue;
+}
+
+.Java, .JavaScript{
+    background-color:pink;
+}
+
+.links :hover{
+    font-weight: bold;
+}
+
+.trybe :hover{
+    color: green;
+}
+
+.devdocs :hover {
+    color:yellow;
+}
+
+.mdn :hover {
+    color:black;
+}
+
+.w3school :hover{
+    color:green;
+}
+
+.stack hover{
+    color: yellow;
+}
