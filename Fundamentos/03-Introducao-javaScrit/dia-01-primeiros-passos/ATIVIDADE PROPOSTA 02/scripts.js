@@ -29,7 +29,7 @@
 // a += 1;
 // console.log(a); // leitura mais nítida
 
-let patientId = '50';
+let patientId = 50;
 let isEnrolled = true;
 let patientInfo = {
   firstName: 'Ana',
