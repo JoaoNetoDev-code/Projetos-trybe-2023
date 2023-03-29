@@ -34,23 +34,67 @@
 
 ////////////////////////////////////////////////
 
-let numero3 = 15
-let numero2= 13
-let numero1 = 22
+// let numero3 = 15
+// let numero2= 13
+// let numero1 = 22
 
-if (numero3 > numero2 && numero3 > numero1) 
+// if (numero3 > numero2 && numero3 > numero1) 
+// {
+//     console.log(numero3 + ' é o maior numero');
+// }
+
+// else if (numero2 > numero3 && numero2 > numero1) 
+// {
+//     console.log(numero2 + ' é o maior numero');
+// }
+
+// else 
+// {
+//     console.log(numero1 + ' é o maior numero');
+// }
+
+///////////////////////////////////////////////////////////////
+
+// valor1 = -1
+
+
+// if (valor1 < 0) 
+// {
+//     console.log(valor1 + ' é um numero negative ');
+// }
+// else if (valor1 === 0) 
+// {
+//     console.log( valor1 + ' é zero ');
+// }
+// else if (valor1 > 0) 
+// {
+//     console.log(valor1 + ' é um numero positivo ');
+// }
+
+//////////////////////////////////////////////////////////////////////////
+
+let lado1 = 80;
+let lado2 = 70;
+let lado3 = 30;
+let soma = lado1 + lado2 + lado3;
+let resultado;
+
+
+if ( soma === 180) 
 {
-    console.log(numero3 + ' é o maior numero');
+    resultado = true
 }
-
-else if (numero2 > numero3 && numero2 > numero1) 
+    else if (soma < 180) 
 {
-    console.log(numero2 + ' é o maior numero');
+    resultado = false;
 }
-
+    else if (soma > 180)
+{
+    resultado = false;
+}
 else 
 {
-    console.log(numero1 + ' é o maior numero');
+    resultado = 'Erro!';
 }
 
-
+console.log(resultado) 
