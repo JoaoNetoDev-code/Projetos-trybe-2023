@@ -121,23 +121,49 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-let nota = 30
-let resultado;
+// let nota = 30
+// let resultado;
  
-if (nota < 0 || nota > 100 ){
-    resultado = 'nota invalida';
+// if (nota < 0 || nota > 100 ){
+//     resultado = 'nota invalida';
+// }
+// else if (nota >= 90) {
+//     resultado = 'Parabens tirou A';
+// } else if (nota >= 80) {
+//     resultado = 'Parabens tirou B';
+// } else if (nota >= 70) {
+//     resultado = 'Poderia ser melhor tirou C';
+// }else if (nota >= 60) {
+//     resultado = 'D';
+// }else if ( nota >= 50) {
+//     resultado = 'E';
+// }else {
+//     resultado =  'F';
+// }
+// console.log (resultado)
+
+////////////////////////////////////////////////////
+
+// let numeroA = 11
+// let numeroB = 35
+// let numeroC = 41
+
+// if (numeroA % 2 === 0 || numeroB % 2 ===0 || numeroC % 2 === 0) {
+//     console.log(true +' Existe! pelo menos um numero par')
+// } 
+// else {console.log( false + ' Não existem numeros pares')
+// }
+
+//////////////////////////////////////////////////////
+
+let numeroA = 10;
+let numeroB = 30;
+let numeroC = 40;
+
+
+if (numeroA % 2 === 1 || numeroB % 2 ===1 || numeroC % 2 ===1); 
+{
+    console.log(true +' Existe! pelo menos um numero ímpar');
+} 
+else {console.log( false + ' Não existem numeros ímpares');
 }
-else if (nota >= 90) {
-    resultado = 'Parabens tirou A';
-} else if (nota >= 80) {
-    resultado = 'Parabens tirou B';
-} else if (nota >= 70) {
-    resultado = 'Poderia ser melhor tirou C';
-}else if (nota >= 60) {
-    resultado = 'D';
-}else if ( nota >= 50) {
-    resultado = 'E';
-}else {
-    resultado =  'F';
-}
-console.log (resultado)
