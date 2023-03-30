@@ -186,34 +186,36 @@
 
 
 
-let salario =3000
+let salario =7000
 let taxaINSS;
 let impostoDeRenda;
 let salarioLiquido;
 
 
 if(salario <= 1556.94 && salario > 0) 
-{ taxaINSS ='8%'}
+{ taxaINSS =0.08}
 else if (salario >= 1556.95 && salario <= 2594.92) 
-{     taxaINSS = '9%'}
+{     taxaINSS =0.09}
 else if (salario >= 2594.93 && salario <= 5189.82) 
-{ taxaINSS = '11%'}
-else if (salario > 5189.82) { taxaINSS = 'taxa fixa de 570.88'}
+{ taxaINSS =0.11}
+else if (salario > 5189.82) { taxaINSS =570.88}
 else {taxaINSS = 'sem valores para deduzir!'}
 console.log('sua taxa para com o INSS é ' + taxaINSS)
 
 
 if (salario <= 1903.98 && salario >0) { impostoDeRenda = 'insento de imposto de renda!';}
-else if (salario >= 1903.99 && salario  <= 2826.65) { impostoDeRenda ='7,5%'}
-else if (salario >= 2826.66 && salario <= 3751.05) { impostoDeRenda ='15%'}
-else if (salario >= 3751.06 && salario <= 4664.68) { impostoDeRenda ='22.5%'}
-else if (salario > 4664.68) {impostoDeRenda ='27.5%'}
+else if (salario >= 1903.99 && salario  <= 2826.65) { impostoDeRenda =0.075}
+else if (salario >= 2826.66 && salario <= 3751.05) { impostoDeRenda =0.15}
+else if (salario >= 3751.06 && salario <= 4664.68) { impostoDeRenda =0.225}
+else if (salario > 4664.68) {impostoDeRenda =0.275}
 else {impostoDeRenda = 'sem valores para deduzir!'}
 console.log('seu IR é de ' + impostoDeRenda)
 
-if (salario > 0) {
-    salarioLiquido = salario - (( 0.11 * salario ) + ( 0.15 * salario ));
-    console.log('seu salario Liquido é de ' + salarioLiquido)
-}else {console.log('você não possoi salario para este mês')}
+if (salario > 0 && salario <= 5189.81) {
+    salarioLiquido = salario - (( taxaINSS * salario ) + ( impostoDeRenda * salario ))
+    console.log('seu salario Liquido é de ' + salarioLiquido)}
+    else if ( salario > 5189.82) { salarioLiquido = salario - ((taxaINSS) + (impostoDeRenda * salario))
+        console.log('seu salario Liquido é de ' + salarioLiquido)}
+    else {console.log('você não possoi salario para este mês')}
 
 ////////////////////////////////////////////////////////////////////// 11
