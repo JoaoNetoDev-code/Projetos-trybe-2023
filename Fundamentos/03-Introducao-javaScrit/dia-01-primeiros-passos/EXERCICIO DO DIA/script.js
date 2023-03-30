@@ -101,20 +101,43 @@
 
 /////////////////////////////////////////////
 
-let rei = 'move-se para todas as direções pela vertical, horizontal ou diagonal, mas apenas uma casa por lance.'
-let rainha ='pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente'
-let cavalo = 'move-se duas casas na horizontal ou na vertical e depois uma para o lado. O movimento completo do cavalo forma um «L» sobre o tabuleiro.'
+// let rei = 'move-se para todas as direções pela vertical, horizontal ou diagonal, mas apenas uma casa por lance.'
+// let rainha ='pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente'
+// let cavalo = 'move-se duas casas na horizontal ou na vertical e depois uma para o lado. O movimento completo do cavalo forma um «L» sobre o tabuleiro.'
 
-let peça ='cavalo'
+// let peça ='cavalo'
 
-switch (peça) {
-            case 'rei':
-            console.log(' O Rei move-se para todas as direções pela vertical, horizontal ou diagonal, mas apenas uma casa por lance.');
-            break
-            case 'rainha':
-            console.log('A Rainha pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente')
-            break
-            case 'cavalo':
-            console.log('O Cavalo move-se duas casas na horizontal ou na vertical e depois uma para o lado. O movimento completo do cavalo forma um «L» sobre o tabuleiro.')
-             default: console.log('Desculpe sua peça não foi registrada.')
-            }
+// switch (peça) {
+//             case 'rei':
+//             console.log(' O Rei move-se para todas as direções pela vertical, horizontal ou diagonal, mas apenas uma casa por lance.');
+//             break
+//             case 'rainha':
+//             console.log('A Rainha pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente')
+//             break
+//             case 'cavalo':
+//             console.log('O Cavalo move-se duas casas na horizontal ou na vertical e depois uma para o lado. O movimento completo do cavalo forma um «L» sobre o tabuleiro.')
+//              default: console.log('Desculpe sua peça não foi registrada.')
+//             }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+let nota = 30
+let resultado;
+ 
+if (nota < 0 || nota > 100 ){
+    resultado = 'nota invalida';
+}
+else if (nota >= 90) {
+    resultado = 'Parabens tirou A';
+} else if (nota >= 80) {
+    resultado = 'Parabens tirou B';
+} else if (nota >= 70) {
+    resultado = 'Poderia ser melhor tirou C';
+}else if (nota >= 60) {
+    resultado = 'D';
+}else if ( nota >= 50) {
+    resultado = 'E';
+}else {
+    resultado =  'F';
+}
+console.log (resultado)
