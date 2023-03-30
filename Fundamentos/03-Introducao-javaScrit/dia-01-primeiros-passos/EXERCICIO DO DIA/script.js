@@ -186,9 +186,10 @@
 
 
 
-let salario =7000
+let salario =3000
 let taxaINSS;
 let impostoDeRenda;
+let salarioDeduzidoInss;
 let salarioLiquido;
 
 
@@ -198,24 +199,30 @@ else if (salario >= 1556.95 && salario <= 2594.92)
 {     taxaINSS =0.09}
 else if (salario >= 2594.93 && salario <= 5189.82) 
 { taxaINSS =0.11}
-else if (salario > 5189.82) { taxaINSS =570.88}
+else if (salario > 5189.82) 
+{ taxaINSS =570.88}
 else {taxaINSS = 'sem valores para deduzir!'}
 console.log('sua taxa para com o INSS é ' + taxaINSS)
 
+if(salario >0) { salarioDeduzidoInss = salario - (taxaINSS * salario)
+    console.log('seu salario com dedução do INSS é de: ' + salarioDeduzidoInss)}
+     else { salarioDeduzidoInss = 'voçê n tem salario!'
+    console.log(salarioDeduzidoInss)}
 
-if (salario <= 1903.98 && salario >0) { impostoDeRenda = 'insento de imposto de renda!';}
-else if (salario >= 1903.99 && salario  <= 2826.65) { impostoDeRenda =0.075}
-else if (salario >= 2826.66 && salario <= 3751.05) { impostoDeRenda =0.15}
-else if (salario >= 3751.06 && salario <= 4664.68) { impostoDeRenda =0.225}
-else if (salario > 4664.68) {impostoDeRenda =0.275}
+if (salarioDeduzidoInss <= 1903.98 && salarioDeduzidoInss >0) { impostoDeRenda = 'insento de imposto de renda!';}
+else if (salarioDeduzidoInss >= 1903.99 && salarioDeduzidoInss  <= 2826.65) { impostoDeRenda =0.075}
+else if (salarioDeduzidoInss >= 2826.66 && salarioDeduzidoInss <= 3751.05) { impostoDeRenda =0.15}
+else if (salarioDeduzidoInss >= 3751.06 && salarioDeduzidoInss <= 4664.68) { impostoDeRenda =0.225}
+else if (salarioDeduzidoInss > 4664.68) {impostoDeRenda =0.275}
 else {impostoDeRenda = 'sem valores para deduzir!'}
 console.log('seu IR é de ' + impostoDeRenda)
 
 if (salario > 0 && salario <= 5189.81) {
-    salarioLiquido = salario - (( taxaINSS * salario ) + ( impostoDeRenda * salario ))
+    salarioLiquido =(salario - ((taxaINSS * salario) + (impostoDeRenda * salarioDeduzidoInss )))
     console.log('seu salario Liquido é de ' + salarioLiquido)}
-    else if ( salario > 5189.82) { salarioLiquido = salario - ((taxaINSS) + (impostoDeRenda * salario))
+    else if ( salario > 5189.82) { salarioLiquido = salario - (taxaINSS + (impostoDeRenda * salarioDeduzidoInss))
         console.log('seu salario Liquido é de ' + salarioLiquido)}
     else {console.log('você não possoi salario para este mês')}
 
+   
 ////////////////////////////////////////////////////////////////////// 11
