@@ -59,9 +59,9 @@ let lesson1 = {
   };
 
 
-  let allLessons = Object.assign({},{lesson1,lesson2,lesson3});
+  let allLessons = Object.assign({}, {lesson1,lesson2,lesson3});
 
-//   console.log(allLessons)
+  console.log(allLessons)
 
 // Com base no objeto elaborado no tópico anterior, crie uma função que retorne o número total de estudantes em todas as aulas.
 
@@ -77,3 +77,35 @@ let lesson1 = {
   }
 
   console.log(totalEStudantes(allLessons));
+
+//   Crie uma função que obtenha o valor da chave de acordo com sua posição no objeto. 
+//   Por exemplo:
+
+// console.log(getValueByNumber(lesson1, 0));
+// // Output: 'Matemática'
+
+function verificarkey (objeto, value) {
+ return Object.values(objeto)[value];
+}
+
+console.log(verificarkey (lesson1,[0]));
+
+// Crie uma função que verifique se o par chave/valor existe na função. 
+// Essa função deve possuir três parâmetros:o objeto, o nome da chave e o valor dela. 
+// Por exemplo:
+
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
+// // Output: true,
+// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// // Output: false
+
+function verifiqueObject ( objeto,keys,value) {
+    let entradas = Object.entries(objeto);
+    let confere = false;
+    for (let index in entradas) {
+        if (entradas[index][0] === keys && entradas[index][1] === value) confere = true;
+
+    }
+    return confere
+}
+console.log(verifiqueObject(lesson2,'professor','Carlos'));
