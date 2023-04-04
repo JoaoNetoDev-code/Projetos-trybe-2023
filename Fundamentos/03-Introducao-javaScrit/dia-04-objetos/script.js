@@ -135,11 +135,217 @@
 //     console.log('Olá ' + names[index])
 //   }
 
-  let car = {
-    model: 'A3 Sedan',
-    manufacturer: 'Audi',
-    year: 2020
-  };
-  for (index in car) {
-    console.log(index, car[index])
-  }
+  // let car = {
+  //   model: 'A3 Sedan',
+  //   manufacturer: 'Audi',
+  //   year: 2020
+  // };
+  // for (index in car) {
+  //   console.log(index, car[index])
+  // }
+
+  // let student = {
+
+  // }
+  //   key1= 'firstName'
+  // firstName = 'João'
+  //   key2= 'lastName'
+  // lastName = 'Neto'
+  // key3= 'phone'
+  // phone = '81989703489'
+
+  // function addProperty(object, key, value) {
+  //   object[key] = value;
+  // }
+
+
+
+  // addProperty(student,key1,firstName)
+  // addProperty(student,key2,lastName)
+  // addProperty(student,key3,phone)
+  // console.log(student)
+
+//   let coolestTvShow = {
+//   name: 'BoJack Horseman',
+//   genre: 'adult animation',
+//   createdBy: 'Raphael Bob-Waksberg',
+//   favoriteCharacter: 'Princess Carolyn',
+//   quote: 'Princess Carolyn always lands on her feet.',
+//   seasons: 6,
+// };
+
+// // for (let key in coolestTvShow) {
+// //   console.log(coolestTvShow[key])
+// // }
+// console.log(Object.keys(coolestTvShow));
+
+// let student1 = {
+//   html: 'Muito Bom',
+//   css: 'Bom',
+//   javascript: 'Ótimo',
+//   softskills: 'Ótimo',
+// };
+
+// let student2 = {
+//   html: 'Bom',
+//   css: 'Ótimo',
+//   javascript: 'Ruim',
+//   softskills: 'Ótimo',
+//   git: 'Bom', // chave adicionada
+// };
+
+// // console.log(Object.keys(student1))
+// // console.log(Object.keys(student2))
+
+// function listSkills(student) {
+//   let arrayOfSkills = Object.keys(student);
+//   for (let index in arrayOfSkills) {
+//     console.log(arrayOfSkills[index] + ', Nível: ' + student[arrayOfSkills[index]]);
+//   }
+// };
+
+// console.log('Estudante 1');
+// listSkills(student1);
+
+// console.log('Estudante 2');
+// listSkills(student2);
+
+// let coolestTvShow = {
+//   name: 'BoJack Horseman',
+//   genre: 'adult animation',
+//   createdBy: 'Raphael Bob-Waksberg',
+//   favoriteCharacter: 'Princess Carolyn',
+//   quote: 'Princess Carolyn always lands on her feet.',
+//   seasons: 6,
+// };
+
+// // for (let property in coolestTvShow) {
+// //   console.log(coolestTvShow[property]);
+// // }
+
+// console.log(Object.values(coolestTvShow));
+
+// // [
+// //   'BoJack Horseman',
+// //   'adult animation',
+// //   'Raphael Bob-Waksberg',
+// //   'Princess Carolyn',
+// //   'Princess Carolyn always lands on her feet.'
+// //    6
+// // ]
+
+
+// let student = {
+//   html: 'Muito Bom',
+//   css: 'Bom',
+//   javascript: 'Ótimo',
+//   softskill: 'Ótimo',
+// };
+
+// function listSkillsValuesWithFor(student) {
+//   let skills = [];
+//   for(skill in student) {
+//     skills.push(student[skill]);
+//   }
+
+//   return skills;
+// };
+
+// function listSkillsValuesWithValues(student) {
+//   return Object.values(student);
+// }
+
+// // Sem Object.values
+// console.log(listSkillsValuesWithFor(student));
+
+// // Com Object.values
+// console.log(listSkillsValuesWithValues(student));
+
+
+// let countries = {
+//   franca: 'Paris',
+//   brasil: 'Brasília',
+//   espanha: 'Madrid',
+//   portugal: 'Lisboa',
+// };
+// let pairKeyValue = Object.entries(countries);
+// console.log(pairKeyValue);
+// for(index in pairKeyValue) {
+//   console.log('--------');
+//   console.log('País:', pairKeyValue[index][0]);
+//   console.log('Capital:', pairKeyValue[index][1]);
+// };
+
+// A função recebe um número qualquer de parâmetros. Todos são agregados como valores para adicionar ao objeto-destino.
+
+// Object.assign(destino, objeto1);
+// Object.assign(destino, objeto1, objeto2);
+// Object.assign(destino, objeto1, objeto2, objeto3, objeto4);
+
+// let person = {
+//   name: 'Alberto',
+//   lastName: 'Gomes',
+//   age: 20,
+// };
+
+// let info = {
+//   age: 23,
+//   job: 'engenheiro',
+// };
+
+// let family = {
+//   children: ['Maria', 'João'],
+//   wife: 'Ana',
+// };
+
+// Object.assign(person, info, family)
+// console.log(person)
+
+// /* Output
+//   { name: 'Alberto',
+//   lastName: 'Gomes',
+//   age: 23,
+//   job: 'engenheiro',
+//   children: [ 'Maria', 'João' ],
+//   wife: 'Ana'
+//   } */
+
+  // let person = {
+  //   name:'Roberto',
+  // };
+  
+  // let lastName = {
+  //   lastName: 'Silva',
+  // };
+  
+  // let newPerson = Object.assign({},person,lastName);
+  // newPerson.name = 'Gilberto';
+  // console.log(newPerson);
+  // console.log(person);
+
+//   let objeto = { a: 1, b: 2, c: 3 };
+
+// for (let property in objeto) {
+//   console.log(property + ' = ' + objeto[property]);
+// }
+// console.log(Object.keys(objeto))
+
+// let starships = {
+//   option1: "Tardis",
+//   option2: "Millennium Falcon",
+//   option3: "Enterprise",
+//   option4: "Heart of Gold"
+// }
+
+// console.log(Object.values(starships))
+
+// let top3Albums = {
+//   1: 'Nightfall in Middle-Earth',
+//   2: 'Imaginations from the Other Side',
+//   3: 'Somewhere Far Beyond',
+// };
+// console.log(Object.entries(top3Albums))
+let casa
+
+Object.casa(cozinha = true,)
+console.log(casa)
