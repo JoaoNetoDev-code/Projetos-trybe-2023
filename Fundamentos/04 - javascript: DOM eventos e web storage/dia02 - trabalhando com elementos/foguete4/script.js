@@ -10,9 +10,9 @@ const sectionCenter = document.createElement('section');
     sectionCenter.className = 'center-content';
     main.appendChild(sectionCenter); /// requisito 3
 
-const P = document.createElement('p');
-    P.innerText = 'talvez pegue!';
-   sectionCenter.appendChild(P); /// requisto 4
+const Paragraph = document.createElement('p');
+    Paragraph.innerText = 'talvez pegue!';
+   sectionCenter.appendChild(Paragraph); /// requisto 4
 
 const sectionLeft = document.createElement('section');
     sectionLeft.className = 'left-content'
@@ -24,21 +24,21 @@ const sectionRight = document.createElement('section');
     main.appendChild(sectionRight); /// requisito 6
 
 const img = document.createElement('img');
-    img.className = 'small-image';
     img.src ='https://picsum.photos/200';
+    img.className = 'small-image';    
     sectionLeft.appendChild(img); //// requisito 7
 
-const lista =  document.createElement('ul');
+const ul =  document.createElement('ul');
 const numeros = ['um','dois','três','quatro','cinto','seis','sete','oito','nove','dez'];
 
-for (index =0; index < numeros.length;index +=1) {
+for (let index =0; index < numeros.length;index +=1) {
     const li = document.createElement('li');
     li.innerText = numeros[index];
-    lista.appendChild(li); //// requisito 8
+    ul.appendChild(li); //// requisito 8
 }
+sectionRight.appendChild(ul);
 
-
-for (index =0; index <3; index +=1) {
+for (let index =0; index <3; index +=1) {
     const h3 = document.createElement('h3');
     h3.innerText = index;
     main.appendChild(h3)
@@ -56,7 +56,7 @@ for (let index =0; index <3; index +=1) {
     h3[index].className = 'description'; //// requisito 2
 }
 
-main.removeChild(sectionLeft)[0]; /// requisito 3
+// main.removeChild(sectionLeft)[0]; /// requisito 3
 
 const centralize =  document.getElementsByClassName('center-content')[0];
     centralize.marginRight = 'auto'; /// requisito 4
