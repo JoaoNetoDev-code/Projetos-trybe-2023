@@ -122,13 +122,50 @@ const clients = [
     }
     
   };
-  console.log(findPersonByName('Ana Santos')) ////true
-  console.log(findPersonByName('ana santos')) ///false
+//   console.log(findPersonByName('Ana Santos')) ////true
+//   console.log(findPersonByName('ana santos')) ///false
   
+
+
   const findPersonByPosition = (position) => {
     // seu código aqui
-  };
+    try {
+    const person = clients[position];
+    if(!person) {
+        throw new Error('Posição invalida tente novamente');
+    }
+    return `Cliente: ${person.name}. ${person.email}.`;
+    } catch (erro) {
+       return erro.message
+    }
+  }
+//   console.log(findPersonByPosition(5)); // Fluxo completo
+// console.log(findPersonByPosition(10)); // Fluxo de exceção
   
+
+  const PersonStates = (Array) => {
+    if (Array.length === 0 ) {
+        throw new Error('Ops, nenhuma pessoa mora nesse estado, tente outro');
+    };
+  };
+
   const findPeopleByState = (state) => {
     // seu código aqui
-  };
+    try {
+        let person = [];
+        for (let index =0; index < clients.length;index +=1) {
+            if (clients[index].address.state === state) {
+                person.push(clients[index].name);
+            }
+            
+        }
+        PersonStates(person);
+        return person;
+
+    }catch (erro) {
+        return erro.message;
+      }
+}
+
+  console.log(findPeopleByState('SP')); // Fluxo completo
+console.log(findPeopleByState('AC')); // Fluxo de exceção
