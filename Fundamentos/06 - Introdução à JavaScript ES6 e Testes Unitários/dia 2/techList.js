@@ -1,39 +1,37 @@
-const techList = require('./techList.js');
+const tecnologias = ['JavaScript', 'Python', 'Java', 'Ruby', 'C#'];
 
-describe('Testa a função techList', () => {
-  it('Testa se a função techList é definida', () => {
-    expect(techList).toBeDefined();
-  });
-  it('Testa se techList é uma função', () => {
-    expect(typeof techList).toBe('function');
-  });
-  it('Lista com 5 tecnologias deve retornar uma lista de objetos ordenados', () => {
-    expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
-      {
-        tech: 'CSS',
-        name: 'Lucas'
-      },
-      {
-        tech: 'HTML',
-        name: 'Lucas'
-      },
-      {
-        tech: 'JavaScript',
-        name: 'Lucas'
-      },
-      {
-        tech: 'Jest',
-        name: 'Lucas'
-      },
-      {
-        tech: 'React',
-        name: 'Lucas'
-      }
-    ]);
-  });
-  it('Lista com 0 tecnologias deve retornar uma mensagem de erro "Vazio!"', () => {
-    expect(techList([], 'Lucas')).toBe('Vazio!');
-  });
-});
+const nome = 'João Neto';
+
+const ordenaArray = (array) => {
+    for(let index =0; index < array.length; index +=1) {
+        array[index].split(' ');
+    }
+    
+    arrayOrdenado.sort((a,b) => a - b);
+}
+console.log(ordenaArray(tecnologias))
+
+const techList = (array, nome) => {
+  const objectArray = [];
+  try {
+    if (array === null) {
+      throw new Error("Vazio!");
+    }
+
+    for (let index = 0; index < array.length; index += 1) {
+      const object = {};
+      object.tech = array[index];
+      object.name = nome;
+      objectArray.push(object);
+    }
+
+    return objectArray;
+  } catch (erro) {
+    return erro.message;
+  }
+};
+
+console.log(techList(tecnologias, nome));
+
 
 module.exports = techList;
