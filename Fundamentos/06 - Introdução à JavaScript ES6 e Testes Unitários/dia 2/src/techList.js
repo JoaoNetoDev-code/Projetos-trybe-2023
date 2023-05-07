@@ -1,33 +1,29 @@
-const tecnologias = ['JavaScript', 'Python', 'Java', 'Ruby', 'C#'];
+const { error } = require("console");
 
 const nome = 'João Neto';
-
-const ordenaArray = (array) => {
-    for(let index =0; index < array.length; index +=1) {
-        array[index].split(' ');
-    }
-    
-    arrayOrdenado.sort((a,b) => a - b);
-}
-console.log(ordenaArray(tecnologias))
+const tecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 
 const techList = (array, nome) => {
+  const arrayTch = array.slice().sort()
   const objectArray = [];
+  
   try {
-    if (array === null) {
-      throw new Error("Vazio!");
-    }
 
-    for (let index = 0; index < array.length; index += 1) {
+    if (array.length === 0) {
+      throw new Error ('Vazio!')
+    }
+    
+    arrayTch.forEach(item => {
       const object = {};
-      object.tech = array[index];
+      object.tech = item;
       object.name = nome;
       objectArray.push(object);
-    }
+      });
 
     return objectArray;
-  } catch (erro) {
-    return erro.message;
+
+  } catch (error) {
+    return error.message;
   }
 };
 
