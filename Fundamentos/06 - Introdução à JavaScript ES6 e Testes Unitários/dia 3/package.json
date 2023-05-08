@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "name": "dia-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jest": "^29.5.1"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
