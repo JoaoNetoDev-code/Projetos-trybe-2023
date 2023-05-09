@@ -28,13 +28,16 @@ const findNumber = (array) => {
     const stringLetter = array.split('');
 
     stringLetter.forEach(letter => {
-      if (letter > 0 || letter < 9 && !letter) {
-        let number  = parseInt(letter);
+        const inteiros = parseInt(letter);
+        if (inteiros > 0 || inteiros < 9) {
+        let number  = inteiros;
         numbers.push(number)
         }
     });
     return numbers;
 }
+
+console.log(findNumber('1 cerveja, 2 shots e 1 catuaba'))
 
 const sumNumber = (array) => {
     let sum = 0;
@@ -44,11 +47,11 @@ const sumNumber = (array) => {
     return sum;
 };
     const hydrate = (string) => {
-       const aguaAbeber = sumNumber(findNumber(string));
-       
-       if (aguaAbeber === 1 ) {return `${aguaAbeber} copo de água`}
+    const aguaAbeber = sumNumber(findNumber(string));
+    
+    if (aguaAbeber === 1 ) {return `${aguaAbeber} copo de água`}
 
-       const result = `${aguaAbeber} copos de água`
+    const result = `${aguaAbeber} copos de água`
         return result;
     }
     console.log(hydrate('4 caipirinhas e 2 cervejas'))

@@ -118,7 +118,7 @@ const clients = [
     }
     
     catch (erro) {
-     return erro.message;
+    return erro.message;
     }
     
   };
@@ -136,7 +136,7 @@ const clients = [
     }
     return `Cliente: ${person.name}. ${person.email}.`;
     } catch (erro) {
-       return erro.message
+      return erro.message
     }
   }
 //   console.log(findPersonByPosition(5)); // Fluxo completo
