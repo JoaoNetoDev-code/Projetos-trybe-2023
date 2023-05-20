@@ -1,4 +1,5 @@
 import validator from 'validator';
+import './style.css';
 
 const verificar = validator;
 const imputText = document.querySelector('#value');
