@@ -1,5 +1,7 @@
 import './style.css';
 
+import Swal from 'sweetalert2';
+
 const btnElement = document.querySelector('button');
 const inputElement = document.querySelector('input');
 const preElement = document.querySelector('pre');
@@ -10,10 +12,16 @@ const handleClick = async () => {
   try {
     const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const data = await result.json();
+    console.log(data);
     preElement.innerHTML = JSON.stringify(data);
     return data;
   } catch (error) {
-    return error.message;
+    Swal.fire({
+      title: 'Erro!',
+      text: error.message,
+      icon: 'error',
+      confirmButtonText: 'ok',
+    });
   }
 };
 
