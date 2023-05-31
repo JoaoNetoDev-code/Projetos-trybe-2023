@@ -8,8 +8,8 @@ const preElement = document.querySelector('pre');
 
 const handleClick = async () => {
   const cep = inputElement.value;
-
   try {
+    if (!cep) throw new Error('você precisa passar um CEP');
     const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const data = await result.json();
     console.log(data);
