@@ -1,6 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import {coffeeList} from '../../data'
 
+import './coffeeList.css'
+
 function CoffeeList() {
   const navigate = useNavigate();
 
@@ -8,7 +10,7 @@ function CoffeeList() {
     navigate('/');
   }
   return (
-    <div>
+    <div className="list-page">
       <h1>Nossos cafés</h1>
         <main>
           <ul>
@@ -21,7 +23,8 @@ function CoffeeList() {
             }  
           </ul>      
         </main>
-      <button onClick={ handleCkick } >Inicio</button>
+      <button
+      onClick={ handleCkick } >Inicio</button>
     </div>
   );
 }

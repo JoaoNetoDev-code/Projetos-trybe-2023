@@ -4,14 +4,12 @@ import './nav-bar.css'
 
 function Navbar() {
   return (
-    <nav>
-      <div>
+    <header className="nav-bar">
+      <nav className='nav'>
       <NavLink to="/" >Home</NavLink>
-      </div>
-      <div>
       <NavLink to="/coffees" >Cafés</NavLink>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 

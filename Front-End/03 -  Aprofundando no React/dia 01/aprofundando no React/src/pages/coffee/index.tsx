@@ -1,33 +1,38 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { coffeeList } from "../../data";
 
+import './coffee.css'
+
 function Coffee() {
   const params = useParams();
-  const currentCoffee = coffeeList.find((item) => item.slug === params.coffee)
+  const currentCoffee = coffeeList.find(
+    (item) => item.slug === params.coffee);
 
   if (!currentCoffee) {
     return(
-      <div>
+      <div className="not-found-coffee">
         <h1>Oops! Esse café não está na nossa lista</h1>
         <h2>Acesse a <Link to="/coffees">Página de cafés</Link> e selecione um de nossos produtos</h2>
       </div>
-    )
+    );
   }
 
 
   return (
-    <div>
-    <h1>{currentCoffee?.description}</h1>
-    <div>
+    <div className="coffee-page">
+    <h1>{currentCoffee.title}</h1>
+    <p>{ currentCoffee.description }</p>
+    <div className="ingredients-list">
       <h2> Ingredientes</h2>
       <ul>
         {
-          currentCoffee?.ingredients
+          currentCoffee.ingredients
             .map((item) => <li key={item}>{item}</li>)
         }
       </ul>
     </div>
-        <img src={currentCoffee?.image} alt={ currentCoffee?.title } />
+        <img src={currentCoffee.image} alt={ currentCoffee?.title } />
     </div>
 
   );
